@@ -1,0 +1,37 @@
+<div>
+  Employees:
+  <br>
+  <ul>
+    {{#each @model.company.employees as |employee|}}
+      <li>{{ employee.firstname }} {{ employee.lastname }} is {{ employee.age }} years old.</li>
+    {{/each}}
+  </ul>
+  <br>
+  <br>Filtered employees:
+  <br>
+  <ul>
+    {{#each @model.company.filteredEmployees as |employee|}}
+      <li>{{ employee.firstname }} {{ employee.lastname }} is {{ employee.age }} years old.</li>
+    {{/each}}
+  </ul>
+  <br>
+  <br>
+  Filter employees (using raw):
+  <br>
+  <ul>
+    {{#each @model.company.filteredEmployeesRaw as |employee|}}
+      <li>{{ employee.firstname }} {{ employee.lastname }} is {{ employee.age }} years old.</li>
+    {{/each}}
+  </ul>
+  <br>
+  <br>
+  Found:
+  <br>
+  {{ @model.company.foundEmployee.firstname }} {{ @model.company.foundEmployee.lastname }} is {{ @model.company.foundEmployee.age }} years old.
+  <br>
+  <br>
+  Found (raw):
+  <br>
+  {{ @model.company.foundEmployeeRaw.firstname }} {{ @model.company.foundEmployeeRaw.lastname }} is {{ @model.company.foundEmployeeRaw.age }} years old.
+
+</div>
